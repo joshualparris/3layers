@@ -1,0 +1,72 @@
+{
+  "subapps": {
+    "alfie-root-dashboard": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\index.html"
+    },
+    "gemini-doctype": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\gemeni\\!DOCTYPE.html"
+    },
+    "gemini-index": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\gemeni\\index.html"
+    },
+    "claude-index": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\claude\\index.html"
+    },
+    "claude-v2-index": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\claude\\indexv2\\index.html"
+    },
+    "chatgpt-bookmark5": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\chatGPT\\Alfie_DnD_Website_Upgraded_Bookmark5\\__Alfie Dnd\\index.html"
+    },
+    "chatgpt-bookmark5-backup": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\chatGPT\\Alfie_DnD_Website_Upgraded_Bookmark5\\__Alfie Dnd\\index.backup-before-upgrade.html"
+    },
+    "chatgpt-goldenfields-v3": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\chatGPT\\Alfie_DnD_Website_V3_Chapter2_Goldenfields\\Alfie Dnd\\index.html"
+    },
+    "chatgpt-goldenfields-backup": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\chatGPT\\Alfie_DnD_Website_V3_Chapter2_Goldenfields\\Alfie Dnd\\index.backup-before-upgrade.html"
+    },
+    "chatgpt-goldenfields-v2-backup": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\chatGPT\\Alfie_DnD_Website_V3_Chapter2_Goldenfields\\Alfie Dnd\\index.v2-backup-before-chapter2.html"
+    }
+  },
+  "sources": {
+    "upgrade-plan": {
+      "path": "C:\\Users\\joshua.parris\\Downloads\\Epic-Quest-Saga\\UPGRADE.md"
+    },
+    "master-three-layer-handover": {
+      "path": "C:\\Users\\joshua.parris\\Downloads\\Epic-Quest-Saga\\Epic-Quest-Saga\\attached_assets\\Three_Layer_Continuity_Handover_MASTER_(1)_(1)_1777889813316.pdf"
+    },
+    "bookmark8": {
+      "path": "C:\\Users\\joshua.parris\\Downloads\\Epic-Quest-Saga\\Epic-Quest-Saga\\attached_assets\\H_-_Bookmark_8_1777889813582.pdf"
+    },
+    "bookmark6": {
+      "path": "C:\\Users\\joshua.parris\\Downloads\\Epic-Quest-Saga\\Epic-Quest-Saga\\attached_assets\\F_SKT_Dubbo_Bookmark_6_1777889813560.pdf"
+    },
+    "bookmark5-current-state": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\chatGPT\\Alfie_DnD_Website_Upgraded_Bookmark5\\__Alfie Dnd\\CURRENT_STATE.md"
+    },
+    "goldenfields-v3-current-state": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\chatGPT\\Alfie_DnD_Website_V3_Chapter2_Goldenfields\\Alfie Dnd\\CURRENT_STATE.md"
+    },
+    "checkpoint4": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\docs\\Checkpoints\\SKT_Dubbo_Resume_Checkpoint_4_Handover.md"
+    },
+    "alphie-inventory": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\Alphie_Complete_Inventory.md"
+    },
+    "chatgpt-handover": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\ChatGPThandover27042026.md"
+    },
+    "claude-handover": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\ClaudeHandover27042026.md"
+    },
+    "gemini-handover": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\GemeniHandover27042026.md"
+    },
+    "root-repository-tree": {
+      "path": "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd\\REPOSITORY_FILE_TREE.md"
+    }
+  }
+}
