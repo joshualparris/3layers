@@ -1,4 +1,5 @@
 # Local publish/cache folders
+.vercel/
 Epic-Quest-Saga/.git/
 Epic-Quest-Saga/.local/
 Epic-Quest-Saga/.pnpm-store-win/

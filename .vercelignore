@@ -1,0 +1,14 @@
+.git
+.vercel
+node_modules
+Epic-Quest-Saga/.git
+Epic-Quest-Saga/.local
+Epic-Quest-Saga/.pnpm-store-win
+Epic-Quest-Saga/node_modules
+Epic-Quest-Saga/artifacts/**/node_modules
+Epic-Quest-Saga-extracted
+test-output
+__pycache__
+*.pyc
+.env
+.env.*
