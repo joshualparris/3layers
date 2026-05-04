@@ -1,6 +1,6 @@
 {
   "framework": "vite",
-  "installCommand": "corepack enable && pnpm install --frozen-lockfile",
+  "installCommand": "corepack enable && corepack prepare pnpm@10.29.3 --activate && pnpm install --frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/continuity-app build",
   "outputDirectory": "artifacts/continuity-app/dist/public",
   "rewrites": [
