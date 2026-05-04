@@ -21,3 +21,9 @@ Original prompt: Help me test this app and get it working in Chrome with a doubl
 - If a sub-app has its own internal `file://` links, convert those specific internal links to relative or proxied localhost routes too.
 - Continue Sprint 1 by making the source ledger persisted app state with reviewed/imported flags.
 - Add the Canon Facts page and expand from starter facts toward at least twenty structured provenance-backed canon facts.
+
+## 2026-05-04 Vercel Prep
+
+- Added Vercel deployment config at the repository root and inner app root.
+- Added hosted-mode behavior for the Sources page so Vercel uses GitHub-backed links for repository files and marks PC-only archive/sub-app files as local-only.
+- Verified hosted-mode locally with a non-local test hostname: no `file://`, `/source/`, or `/subapp/` links; no browser console errors.

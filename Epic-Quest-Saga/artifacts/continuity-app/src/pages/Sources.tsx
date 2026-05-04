@@ -14,6 +14,7 @@ import { CanonBadge } from "@/components/CanonBadge";
 import type { CanonStatus, Layer } from "@/data/initialState";
 import {
   CANON_FACT_PREVIEWS,
+  IS_HOSTED_DEPLOYMENT,
   SOURCE_DOCUMENTS,
   SUB_APP_LINKS,
   type SourceDocument,
@@ -85,7 +86,19 @@ function CopyPathButton({ path, label = "Copy Path" }: { path: string; label?: s
   );
 }
 
-function OpenLocalLink({ url, label = "Open" }: { url: string; label?: string }) {
+function OpenLocalLink({ url, label = "Open" }: { url: string | null; label?: string }) {
+  if (!url) {
+    return (
+      <span
+        className="inline-flex items-center gap-1.5 text-xs bg-secondary text-muted-foreground border border-border px-2.5 py-1.5 rounded"
+        title="This source lives on Josh's PC and is available through the local launcher."
+      >
+        <Lock size={12} />
+        Local Only
+      </span>
+    );
+  }
+
   return (
     <a
       href={url}
@@ -151,6 +164,12 @@ export function Sources() {
           <p className="text-2xl font-semibold text-orange-300">{dmPrivateFacts + unresolvedFacts}</p>
         </div>
       </div>
+
+      {IS_HOSTED_DEPLOYMENT && (
+        <div className="rounded border border-amber-500/30 bg-amber-500/10 p-3 text-xs text-amber-100 leading-relaxed">
+          Hosted mode is using GitHub-backed links for files included in the repository. PC-only source archives and sub-app HTML files stay protected as local-only entries and still work through the Windows launcher.
+        </div>
+      )}
 
       <div className="rounded border border-border bg-card p-3 flex flex-wrap gap-2 items-center">
         <div className="relative flex-1 min-w-56">

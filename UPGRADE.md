@@ -359,6 +359,7 @@ Implemented first slice:
 - Added canon fact starters for the current L3 anchor, layer separation, 2014 vs 2024 build conflict, Rillix delivery, Miros news delivery, Kella terms, Goldenfields special NPCs, and Shalvus DM-private gating.
 - Fixed Chrome's blocked `file://` local-resource errors by routing source documents and sub apps through the local Python server (`/source/<id>` and `/subapp/<id>/`).
 - Rebuilt and verified the launcher with the fresh production assets and no browser console errors on the Sources page.
+- Added Vercel deployment configuration and hosted-mode source behavior so public deployments link to GitHub-hosted repository files while PC-only sub apps remain local-only.
 
 Next practical continuation:
 

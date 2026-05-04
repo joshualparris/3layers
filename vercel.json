@@ -1,0 +1,12 @@
+{
+  "framework": "vite",
+  "installCommand": "cd Epic-Quest-Saga && corepack enable && pnpm install --frozen-lockfile",
+  "buildCommand": "cd Epic-Quest-Saga && pnpm --filter @workspace/continuity-app build",
+  "outputDirectory": "Epic-Quest-Saga/artifacts/continuity-app/dist/public",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

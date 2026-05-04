@@ -8,7 +8,8 @@ export interface SourceDocument {
   title: string;
   kind: SourceKind;
   path: string;
-  url: string;
+  url: string | null;
+  hostedUrl?: string;
   layerScope: Layer[];
   canonStatus: CanonStatus;
   priority: "primary" | "supporting" | "archive";
@@ -21,7 +22,8 @@ export interface SubAppLink {
   family: string;
   status: SubAppStatus;
   path: string;
-  url: string;
+  url: string | null;
+  hostedUrl?: string;
   notes: string;
 }
 
@@ -38,6 +40,19 @@ const alfieRoot =
   "C:\\Users\\joshua.parris\\OneDrive - Dubbo Christian School\\Documents\\03_Projects\\__Alfie Dnd";
 const epicRoot = "C:\\Users\\joshua.parris\\Downloads\\Epic-Quest-Saga";
 const appRoot = `${epicRoot}\\Epic-Quest-Saga`;
+const githubBlobBase = "https://github.com/joshualparris/3layers/blob/main";
+const localHosts = new Set(["localhost", "127.0.0.1", ""]);
+
+export const IS_HOSTED_DEPLOYMENT =
+  typeof window !== "undefined" && !localHosts.has(window.location.hostname);
+
+function githubBlobUrl(repoPath: string) {
+  return `${githubBlobBase}/${repoPath.split("/").map(encodeURIComponent).join("/")}`;
+}
+
+function runtimeOpenUrl(localUrl: string, hostedUrl?: string) {
+  return IS_HOSTED_DEPLOYMENT ? hostedUrl ?? null : localUrl;
+}
 
 function source(
   id: string,
@@ -48,8 +63,21 @@ function source(
   canonStatus: CanonStatus,
   priority: SourceDocument["priority"],
   notes: string,
+  hostedRepoPath?: string,
 ): SourceDocument {
-  return { id, title, kind, path, url: `/source/${id}`, layerScope, canonStatus, priority, notes };
+  const hostedUrl = hostedRepoPath ? githubBlobUrl(hostedRepoPath) : undefined;
+  return {
+    id,
+    title,
+    kind,
+    path,
+    url: runtimeOpenUrl(`/source/${id}`, hostedUrl),
+    hostedUrl,
+    layerScope,
+    canonStatus,
+    priority,
+    notes,
+  };
 }
 
 function subApp(
@@ -59,8 +87,10 @@ function subApp(
   status: SubAppStatus,
   path: string,
   notes: string,
+  hostedRepoPath?: string,
 ): SubAppLink {
-  return { id, title, family, status, path, url: `/subapp/${id}/`, notes };
+  const hostedUrl = hostedRepoPath ? githubBlobUrl(hostedRepoPath) : undefined;
+  return { id, title, family, status, path, url: runtimeOpenUrl(`/subapp/${id}/`, hostedUrl), hostedUrl, notes };
 }
 
 export const SUB_APP_LINKS: SubAppLink[] = [
@@ -156,6 +186,7 @@ export const SOURCE_DOCUMENTS: SourceDocument[] = [
     "table-canon",
     "primary",
     "Roadmap for faithful app upgrades and feature order.",
+    "UPGRADE.md",
   ),
   source(
     "master-three-layer-handover",
@@ -166,6 +197,7 @@ export const SOURCE_DOCUMENTS: SourceDocument[] = [
     "table-canon",
     "primary",
     "Current three-layer source of truth for the app build.",
+    "Epic-Quest-Saga/attached_assets/Three_Layer_Continuity_Handover_MASTER_(1)_(1)_1777889813316.pdf",
   ),
   source(
     "bookmark8",
@@ -176,6 +208,7 @@ export const SOURCE_DOCUMENTS: SourceDocument[] = [
     "table-canon",
     "primary",
     "Later in-game continuity handover used by the current app seed.",
+    "Epic-Quest-Saga/attached_assets/H_-_Bookmark_8_1777889813582.pdf",
   ),
   source(
     "bookmark6",
@@ -186,6 +219,7 @@ export const SOURCE_DOCUMENTS: SourceDocument[] = [
     "table-canon",
     "supporting",
     "Intermediate in-game continuity handover between Nightstone and Goldenfields.",
+    "Epic-Quest-Saga/attached_assets/F_SKT_Dubbo_Bookmark_6_1777889813560.pdf",
   ),
   source(
     "bookmark5-current-state",
