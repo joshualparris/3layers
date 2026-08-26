@@ -18,6 +18,7 @@ import {
   Gavel,
   Gauge,
   ClipboardCheck,
+  Landmark,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -40,6 +41,7 @@ const NAV_ITEMS = [
   { href: "/characters", icon: Shield, label: "Characters" },
   { href: "/notes", icon: FileText, label: "Notes & Canon" },
   { href: "/quests", icon: CheckSquare, label: "Quests" },
+  { href: "/goldenfields", icon: Landmark, label: "Goldenfields" },
   { href: "/session-readiness", icon: Gauge, label: "Session Readiness" },
   { href: "/canon-audit", icon: ClipboardCheck, label: "Canon Audit" },
   { href: "/rules", icon: Gavel, label: "Rules Audit" },
