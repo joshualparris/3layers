@@ -1,18 +1,17 @@
 # Podcast Integration TODO
 
 **Decision:** Add to the Epic Quest Saga web experience.  
-**Status:** ✅ Core one-click podcast bank added 13 September 2026.
+**Status:** ✅ Independent one-click podcast bank added 16 September 2026.
 **Topic bank:** tabletop RPGs, dungeon mastering, fantasy storytelling, worldbuilding, game design.
 
 ## TODO
-- [x] Curate 25 Spotify episodes for RPG/fantasy learning in the shared JoshHub `dnd` bank.
-- [x] Add a collapsed bottom dock: **🎧 Listen to a different RPG podcast**.
-- [x] One tap selects/loads another episode; persist recent selections and avoid immediate repeats.
+- [x] Store 25 Spotify RPG/fantasy episodes directly inside the 3layers app.
+- [x] Add a collapsed bottom **🎧 Podcasts** launcher.
+- [x] One tap opens the player; **🎲 Different podcast** chooses another episode and avoids an immediate repeat.
+- [x] Persist the selected episode locally.
 - [x] Use Spotify embed/deep links without assuming autoplay.
-- [x] Collapse automatically when normal HTML audio/video begins; live game narration remains primary.
-- [x] Tag episodes by DM advice, story craft, worldbuilding, rules and game design.
-- [x] Keep gameplay/launch controls primary.
-- [x] Shared dock supplies mobile/a11y, reduced-motion and persistence behaviour; app-specific automated tests can be added later.
+- [x] Keep gameplay and continuity controls primary on mobile.
+- [x] Remove the runtime dependency on JoshHub, jsDelivr, the shared launcher and the shared JSON catalogue.
 
 ## Implementation
-The Epic Quest Saga continuity app shell loads the shared `dnd` podcast catalogue through `podcast-dock-universal.js`.
+`Epic-Quest-Saga/artifacts/continuity-app/public/podcast-player.js` contains the local 25-episode bank and player UI. The Vite app shell loads it directly as `/podcast-player.js`, so a JoshHub podcast outage cannot break 3layers.
